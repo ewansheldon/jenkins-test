@@ -14,11 +14,13 @@ pipeline {
                 sh '''pwd
                 ls'''
                 sh "cd spring-project"
+                sh "pwd"
                 sh "ls"
           }
         }
         stage('Test') {
             steps {
+                sh "pwd"
                 sh "./gradlew test"
             }
         }
