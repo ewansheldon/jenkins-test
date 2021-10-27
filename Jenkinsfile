@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clean workspace') {
             steps {
-                cleanWs()
+//                cleanWs()
             }
         }
         stage('SCM') {
@@ -34,12 +34,15 @@ pipeline {
 //                        repositoryName: 'emr',
 //                        serverId: 'a2a6eba9-482f-4319-9806-fd50d236fa0d')
 
-                withCredentials([usernamePassword(credentialsId: 'builduser99', passwordVariable: 'builduserpass', usernameVariable: 'builduser')]) {
-                    sh 'git clone --depth 1 https://${builduser}:${builduserpass}@bitbucket.eclinicalworks.com/scm/emr/emr.git --branch "bugfix/11.52/PE-140379-view-meds-trunk" '
-                }
+//                withCredentials([usernamePassword(credentialsId: 'builduser99', passwordVariable: 'builduserpass', usernameVariable: 'builduser')]) {
+//                    sh 'git clone --depth 1 https://${builduser}:${builduserpass}@bitbucket.eclinicalworks.com/scm/emr/emr.git --branch "bugfix/11.52/PE-140379-view-meds-trunk" '
+//                }
             }
         }
-//        stage('Test') {
-//        }
+        stage('Test') {
+            steps {
+                sh './gradlew cpoe:test'
+            }
+        }
     }
 }
