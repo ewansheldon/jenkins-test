@@ -44,6 +44,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo skip'
+                sh 'ls'
 //                sh './gradlew cpoe:test'
             }
         }
