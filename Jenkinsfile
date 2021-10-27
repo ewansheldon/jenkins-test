@@ -35,7 +35,7 @@ pipeline {
                         serverId: 'a2a6eba9-482f-4319-9806-fd50d236fa0d')
             }
         }
-        stage('Test') {
-        }
+//        stage('Test') {
+//        }
     }
 }
