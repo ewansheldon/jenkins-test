@@ -43,7 +43,7 @@ pipeline {
             steps {
                 sh 'echo skip'
                 sh '''
-                    cd emr
+                    cd emr/server
                     ./gradlew cpoe:test
                    '''
             }
