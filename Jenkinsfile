@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clean workspace') {
             steps {
-//                cleanWs()
+                cleanWs()
                 sh 'echo skip'
             }
         }
@@ -43,7 +43,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh './gradlew cpoe:test'
+                sh 'echo skip'
+//                sh './gradlew cpoe:test'
             }
         }
     }
