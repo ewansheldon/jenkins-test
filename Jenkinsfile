@@ -5,10 +5,12 @@ pipeline {
         stage('clean workspace') {
             steps {
 //                cleanWs()
+                sh 'echo skip'
             }
         }
         stage('SCM') {
             steps {
+                sh 'echo skip'
 //                 sh "git clone https://github.com/ewansheldon/spring-project.git"
 
 //                checkout BbS(branches: [
