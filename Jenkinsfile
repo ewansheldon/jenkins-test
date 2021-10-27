@@ -14,7 +14,7 @@ pipeline {
                 checkout BbS(branches: [
                         [name: 'emr/bugfix/11.52/PE-140379-view-meds-trunk']
                 ],
-                        credentialsId: 'builduser',
+                        credentialsId: 'builduser99',
                         extensions: [
                                 [$class : 'CheckoutOption',
                                  timeout: 120
