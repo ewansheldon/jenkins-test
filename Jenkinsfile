@@ -36,8 +36,6 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
-            }
         }
     }
 }
