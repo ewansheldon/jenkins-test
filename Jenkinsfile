@@ -26,7 +26,7 @@ pipeline {
                                 ],
                                 [$class: 'PruneStaleBranch'],
                                 [$class: 'DisableRemotePoll'],
-                                [$class: 'LocalBranch', localBranch: 'emr/bugfix/11.52/PE-140379-view-meds-trunk']
+//                                [$class: 'LocalBranch', localBranch: 'emr/bugfix/11.52/PE-140379-view-meds-trunk']
                         ],
                         id: '51b38292-79e6-46ad-ba39-7c8642238e41',
                         mirrorName: '',
