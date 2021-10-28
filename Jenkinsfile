@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        javaSourceJDK = "1.8"
+    }
 
     stages {
         stage('clean workspace') {
